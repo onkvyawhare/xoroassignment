@@ -1,5 +1,5 @@
 
-// src/App.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TaskForm from './components/TaskForm';
@@ -11,6 +11,7 @@ const App = () => {
   const [currentTask, setCurrentTask] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
+  //detching task
   const fetchTasks = async () => {
     const response = await axios.get('https://xoroassignment.onrender.com/tasks');
     setTasks(response.data);
